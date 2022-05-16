@@ -4,6 +4,8 @@ class Shape {
       return 0;
     }
   }
+
+  
   // A Rectangle is a Shape with a specific width and height
   class Rectangle extends Shape {   // extended form the Shape class
     private double width;
@@ -25,5 +27,40 @@ class Shape {
     public double getArea() {
       return 3.14 * radius * radius; 
     }
+
+    
+  }
+
+  class Cuadrado extends Shape{
+
+        private double lado;
+        private double areaCuadrado;
+     
+        public Cuadrado(double lado) 
+        {
+            this.lado = lado;
+        }
+        
+        public double getLado() 
+        {
+            return lado;
+        }
+     
+        public void setLado(double lado) 
+        {
+            this.lado = lado;
+        }
+     
+        public double getareaCuadrado() 
+        {
+            return areaCuadrado;
+        }    
+        
+        @Override
+        public double getArea() 
+        {
+            areaCuadrado = lado * lado;
+        }    
+
   }
   
